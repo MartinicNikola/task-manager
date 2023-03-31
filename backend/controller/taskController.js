@@ -8,15 +8,19 @@ const getTasks = asyncHandler(async (req,res) => {
 })
 
 const setTask = asyncHandler(async (req,res) => {
-    if(!req.body.text){
+    if(!req.body.heading || !req.body.description){
         res.status(400)
-        throw new Error('please add textfield')
+        throw new Error('please add heading and description')
     }
 
     const task = await Task.create({
-        text: req.body.text
+        userId: req.body.userEmail,
+        heading: req.body.heading,
+        description: req.body.description,
+        dueTo: req.body.dueTo,
+        place: req.body.place
     })
-    res.status(200).json(task)
+    res.status(200).json(task.text)
 })
 
 const updateTask = asyncHandler(async (req,res) => {

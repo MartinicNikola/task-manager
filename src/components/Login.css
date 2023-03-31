@@ -1,0 +1,20 @@
+.login{
+    width: 50%;
+    margin: 10px auto;
+}
+
+.register{
+    width: 50%;
+    margin: 10px auto;
+}
+
+.formControl{
+    width: 100%;
+    margin: 20px;
+}
+
+Label{
+    font-size: small;
+    float: left;
+    margin: 0;
+}

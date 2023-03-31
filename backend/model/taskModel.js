@@ -2,10 +2,13 @@ const mongoose = require('mongoose')
 
 const TaskSchema = mongoose.Schema({
     userId: String,
-    Task:{
-        id: String,
-        description: String
-    }
+    id: String,
+    setToDone: {type:Boolean, default: false},
+    heading: {type:String, required:true},
+    description: {type:String, required:true},
+    dueTo: Date,
+    place: String
+
 })
 
-module.exports = mongoose.model('UserTask',UserTask)
+module.exports = mongoose.model('UserTask',TaskSchema)

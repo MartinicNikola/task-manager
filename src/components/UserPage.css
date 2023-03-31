@@ -1,0 +1,28 @@
+.hello{
+    margin: 20px 0;
+}
+
+.userContainer{
+    margin:0 15%;
+    padding:0 5%;
+}
+
+.userTask{
+    background-color: rgb(36, 123, 255);
+    height: fit-content;
+    margin: 5px;
+}
+
+.taskText{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.deleteBtn{
+    float: right;
+    margin: 5px;
+    border-radius: 50%;
+    size: 50%;
+}
