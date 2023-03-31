@@ -59,13 +59,8 @@ const registerUser = asyncHandler(async (req, res) => {
       throw new Error('Invalid email or password')
     }
   })
-
-  const getData = asyncHandler(async(req,res) => {
-    res.json(req.user)
-  })
   
   module.exports = {
     registerUser,
     loginUser,
-    getData
   }
